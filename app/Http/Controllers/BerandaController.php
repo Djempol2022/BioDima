@@ -17,7 +17,6 @@ class BerandaController extends Controller
     }
 
     public function pesan_garansi(Request $request){
-        
         Form_Garansi::create([
             'jumlah'=>$request->jumlah,
             'nama'=>$request->nama,
@@ -32,6 +31,75 @@ class BerandaController extends Controller
 
         ]);
         return redirect()->back()->with('success'); 
+        
+    }
+    public function delSession(){
+        session()->flush();
+    }
+    public function ajaxRequest(Request $request){
+        session(['nama'=>$request->nama]);
+        session(['no_wa'=>$request->no_wa]);
+        session(['keluhan'=>$request->keluhan]);
+        session(['kota'=>$request->kota]);
+        session(['provinsi'=>$request->provinsi]);
+        session(['alamat_lengkap'=>$request->alamat_lengkap]);
+        session(['qty_produk'=>$request->qty_produk]);
+        // $check = $request->keluhan;
+        $output = '
+        <div class="row mt-5">
+                    <h4 class="fw-bold f-poppins ">Transfer Pembayaran</h4>
+                </div>
+                <div class="row">
+                    <ul>
+                        <li>
+                            <img src="assets/bri.svg" alt="">
+                        </li>
+                        <li class="mt-2 mb-2">
+                        <label for="exampleFormControlInput1" class="form-label f-poppins text-secondary">Sahroni</label>
+                        </li>
+                        <li>
+                        <h6 class="fw-bold f-poppins mt--1  text-dark">149501005407500</h6>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <img src="assets/bri.svg" alt="">
+                        </li>
+                        <li class="mt-2 mb-2">
+                        <label for="exampleFormControlInput1" class="form-label f-poppins text-secondary">Sahroni</label>
+                        </li>
+                        <li>
+                        <h6 class="fw-bold f-poppins mt--1  text-dark">149501005407500</h6>
+                        </li>
+                    </ul>
+                </div>
+                   <div class="row ">
+                    <h4 class="fw-bold f-poppins ">Periode Pembayaran</h4>
+                     <label for="exampleFormControlInput1" class="form-label f-poppins text-secondary">Waktu yang Tersisa</label>
+                   
+                     <h4 class="fw-bold f-poppins ">07:00</h4> 
+                     
+                </div>
+                <div class="row ">
+                    <h4 class="fw-bold f-poppins ">Transaksi</h4>
+                    
+            
+                    <div class="mb-3">
+                        <label for="formFileMultiple" class="form-label f-poppins text-secondary">Upload Bukti Pembayaran</label>
+                        <input class="form-control" type="file" id="formFileMultiple" multiple>
+                    </div>
+                     
+                     <button type="submit" class="btn text-center  f-poppins rounded-pill btn-danger">
+                    
+                   Upload & Konfirmasi
+                    </button>
+                </div>
+        ';
+        $data = array(
+            'data'=>$output,
+            // 'check'=>$check
+        );
+        return response()->json($data, 200);
     }
     public function bayar_garansi(Request $request, $id){
         Form_Garansi::where('form_garansi_id', $id)->update([

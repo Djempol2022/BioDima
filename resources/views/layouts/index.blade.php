@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bio Dima</title>
     @include('includes.style')
+    @include('includes.script')
+    {{-- <script src="\assets\js\jquery.js"></script> --}}
   </head>
   <body>
    <!-- navbar -->
@@ -71,6 +73,5 @@
 </div>
 <!-- akhir footer -->
 
-   @include('includes.script')
   </body>
 </html>

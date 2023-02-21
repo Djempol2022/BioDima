@@ -28,3 +28,7 @@ Route::post('/bayarmember/{$id}',[BerandaController::class, 'bayar_member'])->na
 Route::get('/dashboard',[DashboardController::class, 'dashboard'])->name('Dashboard');
 Route::get('/adminformmember',[DashboardController::class, 'adminformmember'])->name('AdminFormMember');
 Route::get('/adminformgaransi',[DashboardController::class, 'adminformgaransi'])->name('AdminFormGaransi');
+
+//ajax
+Route::post('/ajaxRequest',[BerandaController::class, 'ajaxRequest'])->name('ajaxRequest');
+Route::get('/deleteSession',[BerandaController::class,'delSession']);
