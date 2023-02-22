@@ -19,10 +19,10 @@ use App\Http\Controllers\DashboardController;
 
 Route::get('/formulir-member', [FormulirMember::class, 'index']);
 Route::post('/formulir-member-store', [FormulirMember::class, 'store']);
-
 // Route::get('/ongkir', [CheckOngkirController::class, 'index']);
 Route::post('/formulir-member', [FormulirMember::class, 'check_ongkir']);
 Route::get('/cities/{province_id}', [FormulirMember::class, 'getCities']);
+
 Route::get('/', [BerandaController::class, 'beranda'])->name('Beranda');
 Route::get('/formgaransi', [BerandaController::class, 'formgaransi'])->name('FormGaransi');
 Route::post('/pesangaransi', [BerandaController::class, 'pesan_garansi'])->name('PesanGaransi');
