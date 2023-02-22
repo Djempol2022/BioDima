@@ -190,35 +190,26 @@
     });
 
     $('#btn_transaksi').attr('disabled', true);
-    // klik button transaksi
-    $('#btn_transaksi').on('click', function(e) {
-      e.preventDefault();
-      $('#btn_transaksi').attr('disabled', true);
-      $('#bg-pembayaran').removeClass('d-none');
-      $('#bg-pembayaran').addClass('d-block');
-
-      countdown();
-    })
 
   });
 
-  function countdown() {
-    var timer2 = "7:01";
-    var interval = setInterval(function() {
-      var timer = timer2.split(':');
-      //by parsing integer, I avoid all extra string processing
-      var minutes = parseInt(timer[0], 10);
-      var seconds = parseInt(timer[1], 10);
-      --seconds;
-      minutes = (seconds < 0) ? --minutes : minutes;
-      if (minutes < 0) clearInterval(interval);
-      seconds = (seconds < 0) ? 59 : seconds;
-      seconds = (seconds < 10) ? '0' + seconds : seconds;
-      //minutes = (minutes < 10) ?  minutes : minutes;
-      $('#countdown').html(minutes + ':' + seconds);
-      timer2 = minutes + ':' + seconds;
-    }, 1000);
-  }
+  //   function countdown() {
+  //     let timer2 = "7:01";
+  //     let interval = setInterval(function() {
+  //       let timer = timer2.split(':');
+  //       //by parsing integer, I avoid all extra string processing
+  //       let minutes = parseInt(timer[0], 10);
+  //       let seconds = parseInt(timer[1], 10);
+  //       --seconds;
+  //       minutes = (seconds < 0) ? --minutes : minutes;
+  //       if (minutes < 0) clearInterval(interval);
+  //       seconds = (seconds < 0) ? 59 : seconds;
+  //       seconds = (seconds < 10) ? '0' + seconds : seconds;
+  //       //minutes = (minutes < 10) ?  minutes : minutes;
+  //       $('#countdown').html(minutes + ':' + seconds);
+  //       timer2 = minutes + ':' + seconds;
+  //     }, 1000);
+  //   }
 
   function totalPembayaran() {
     let totalPembayaran = parseInt($('input[name=paket]:checked').val()) + parseInt($('#unique_code').text()) +

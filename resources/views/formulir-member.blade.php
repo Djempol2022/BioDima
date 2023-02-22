@@ -108,12 +108,12 @@
           <div>
             <button type="submit" class="btn btn-primary" id="btn_transaksi">Lakukan Transaksi</button>
           </div>
+          <div class="bg-primary mt-5" id="bg-pembayaran">
+            <h5>Periode Pembayaran</h5>
+            <h6>Waktu yang tersisa</h6>
+            <h5 id="countdown"></h5>
+          </div>
       </form>
-      <div class="bg-primary mt-5 d-none" id="bg-pembayaran">
-        <h5>Periode Pembayaran</h5>
-        <h6>Waktu yang tersisa</h6>
-        <h5 id="countdown"></h5>
-      </div>
     </div>
   </div>
   </div>
@@ -121,6 +121,7 @@
   <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
   @include('script-formulir-member')
   @include('script-formulir-member-localstorage')
+  @include('script-formulir-member-countdown')
 </body>
 
 </html>
