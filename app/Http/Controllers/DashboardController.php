@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Form_Garansi;
-use App\Models\Form_Member  ;
+use App\Models\Form_Member;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller

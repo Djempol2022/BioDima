@@ -2,6 +2,7 @@
 @section('konten')
 <!-- hero -->
     <div class="container">
+    
         <div class="row">
             <div class="col-lg-6 pt-5 ">
                 <div class="row pt-5 mt-5">
@@ -152,14 +153,15 @@
            <p class="mt--1 f-poppins text-dark text-justify para-line"> 
         Dengan kandungan 100% dari bahan alami yang berkhasiat menjaga kesehatan serta membantu pemulihan berbagai macam penyakit maka kami memberikan harga jual yang menyesuaikan yaitu <span class="text-merah fw-bold">Rp. 350.000,-</span> per-botol yang berisikan 40 pil. Lakukan pembelian produk <span class="text-merah"> Bio Dima </span> paket <span class="text-merah fw-bold">GARANSI</span>  yang terdiri dari 2 botol dengan harga <span class="text-merah fw-bold">Rp. 700.000,-</span> maka kami akan memberikan produk sedekah sebanyak 1 botol. 
         </p>    
-        <a href="">
-                <button class="btn uk-width-1-3@s text-left f-poppins rounded-pill btn-danger">
+    <a href="{{route('FormGaransi')}}">
+        <input type="hidden" name="sesion" value="{{$session_id}}">
+                <button  class="btn uk-width-1-3@s text-left f-poppins rounded-pill btn-danger">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4  me-2 mt--s1" viewBox="0 0 16 16">
   <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
 </svg>   
                 Ayo Beli Sekarang
                 </button>
-                </a>
+     </a>
         </div>
     </div>
     </div>
