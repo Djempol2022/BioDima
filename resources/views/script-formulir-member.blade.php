@@ -7,17 +7,18 @@
   $(document).ready(function() {
 
     // harga paket
-    let paket = $('input[name=paket]:checked').val();
+    let paket = $('input[name=paket_id]:checked').val();
+    console.log(paket);
     let formatted = formatter.format(paket);
     $('#harga-paket').text(formatted);
-    $('#text-paket').text($('input[name=paket]:checked').attr("id"));
+    $('#text-paket').text($('input[name=paket_id]:checked').attr("id"));
 
 
     // Call the function to set the unique code when the page is loaded or refreshed
     setUniqueCode();
 
     // When the radio button is changed
-    $('input[name=paket]').change(function() {
+    $('input[name=paket_id]').change(function() {
       paket = $(this).val();
       formatted = formatter.format(paket);
 
@@ -212,7 +213,7 @@
   //   }
 
   function totalPembayaran() {
-    let totalPembayaran = parseInt($('input[name=paket]:checked').val()) + parseInt($('#unique_code').text()) +
+    let totalPembayaran = parseInt($('input[name=paket_id]:checked').val()) + parseInt($('#unique_code').text()) +
       parseInt($('#tipe_courier').val());
     $('#total_pembayaran').text(formatter.format(totalPembayaran));
     $('#total_pembayaran_input').val(totalPembayaran);
