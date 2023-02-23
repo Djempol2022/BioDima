@@ -1,0 +1,123 @@
+.ml-auto{
+    margin-left: auto;
+}
+
+
+
+.border-left{
+    border-left: 5px solid #7A1C21;
+    height: auto;
+}
+
+.f-poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-danger{
+    background-color:   rgba(171, 39, 46, 0.1) !important;
+}
+
+h1{
+    font-size: 55px;
+}
+.text-merah{
+    color: #AB272E;
+}
+.mt--1{
+    margin-top: -15px;
+}
+.mt--s1{
+    margin-top: -5px;
+}
+.gambari{
+    height: 90px;
+    width: 90px;
+}
+.gambar-hero{
+    height: 440px;
+}
+.text-justify{
+    text-align: justify;
+}
+a{
+    text-decoration: none !important;
+}
+.cara:hover{
+    background:  rgba(171, 39, 46, 0.1) !important;
+    text-decoration: none !important;
+    transition: 0.8s;
+
+}
+.btn-danger{
+    background: #AB272E !important;
+    width: 100%;
+height: 50px;
+    color: white;
+}
+.btn-white{
+    background-color:  rgb(232, 232, 232);
+    width: 100%;
+    
+}
+.btn-white:hover{
+    background-color: transparent !important; 
+    border: #AB272E 3px solid!important;
+    color: #AB272E;
+    transition: 0.8s;
+}
+.btn-danger:hover{
+    background-color: transparent !important; 
+    border: #AB272E 3px solid!important;
+    color: #AB272E;
+    transition: 0.8s;
+}
+
+.btn-non-danger{
+    background-color: transparent;
+    border: #AB272E 3px solid;
+    width: 100%;
+    height: 50px;
+    color: #AB272E;
+
+}
+.form-non-danger{
+    background-color: transparent;
+    border: #AB272E 3px solid;
+    width: 100%;
+    height: 50px;
+    color: #AB272E;
+
+}
+.btn-non-danger:hover{
+    background: #AB272E !important;
+    transition: 0.8s;
+    color: white;
+
+}
+.bg-merah{
+    background: #AB272E;
+}
+.border-card{
+    border-radius: 0px 0px 10px 10px;
+ 
+}
+
+.para-line{
+    line-height: 54px;
+}
+.form-i{
+    position: absolute;
+    z-index: 9999;
+    height: 10px;
+
+    line-height: 2; 
+}
+ul{
+    list-style-type: none;
+}
+
+@media (min-width: 576px) { 
+    .text-besak{
+        font-size: 28px;
+    }
+ }
