@@ -55,7 +55,7 @@
             <div class="row">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label f-poppins text-secondary">Nama Lengkap</label>
-                <input type="text" required class="form-control rounded-pill form-non-danger f-poppins" name="nama" @if(session()->has('nama'))value='{{session()->get('nama')}}'@else value="" @endif id="nama" placeholder="Masukan Nama Lengkap"  
+                <input type="text" required class="form-control rounded-pill form-non-danger f-poppins" name="nama" @if(session()->has('nama'))value='{{session()->get('nama')}}'@else value="" @endif id="nama" placeholder="Masukan Nama Lengkap">  
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label f-poppins text-secondary">Nomor WA</label>
