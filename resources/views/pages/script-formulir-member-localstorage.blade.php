@@ -1,6 +1,7 @@
 <script>
   $('#lanjut_transaksi').on('click', function(e) {
     e.preventDefault();
+    $('#bg-pembayaran').removeClass('d-none')
     const form = document.querySelector('#myForm');
     const formData = {};
     const formElements = form.elements;

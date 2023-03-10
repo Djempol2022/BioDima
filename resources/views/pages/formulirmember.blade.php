@@ -250,18 +250,18 @@
           </div>
         </div>
         <div class="row">
-          <button type="submit" id="lanjut_transaksi" class="btn text-center  f-poppins rounded-pill btn-danger">
+          <button type="submit" id="lanjut_transaksi" class="btn text-center f-poppins rounded-pill btn-danger">
             Lakukan Transaksi
           </button>
         </div>
         <div class="row">
-          <div class="col-6">
+          <div class="col-12">
 
-            <h4 class="fw-bold f-poppins mt--1 mt-1">Total Pembayaran</h4>
-          </div>
-          <div class="col-6">
-
-
+            <div class="bg-primary mt-5 d-none" id="bg-pembayaran">
+              <h5>Periode Pembayaran</h5>
+              <h6>Waktu yang tersisa</h6>
+              <h5 id="countdown"></h5>
+            </div>
           </div>
         </div>
 
@@ -291,6 +291,7 @@
   </script> --}}
   @include('pages.script-formulir-member')
   @include('pages.script-formulir-member-localstorage')
+  @include('pages.script-formulir-member-countdown')
 
   {{-- <script type="module">
                         //fungsi tambah minus
